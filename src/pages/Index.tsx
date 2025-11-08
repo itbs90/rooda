@@ -5,6 +5,7 @@ import HowItWorks from "@/components/HowItWorks";
 import VisualShowcase from "@/components/VisualShowcase";
 import Testimonials from "@/components/Testimonials";
 import Features from "@/components/Features";
+import DashboardPreview from "@/components/DashboardPreview";
 import Pricing from "@/components/Pricing";
 import FAQ from "@/components/FAQ";
 import FinalCTA from "@/components/FinalCTA";
@@ -20,6 +21,7 @@ const Index = () => {
       <VisualShowcase />
       <Testimonials />
       <Features />
+      <DashboardPreview />
       <Pricing />
       <FAQ />
       <FinalCTA />
