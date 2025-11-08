@@ -1,5 +1,5 @@
 import { Instagram } from "lucide-react";
-import logoFull from "@/assets/logo-full.png";
+import logoBranco from "@/assets/logo-branco.png";
 
 const Footer = () => {
   return (
@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Logo e tagline */}
           <div className="flex flex-col gap-4">
-            <img src={logoFull} alt="Rooda" className="h-12 brightness-0 invert" />
+            <img src={logoBranco} alt="Rooda" className="h-12" />
             <p className="text-primary-foreground/80 text-base">
               Cada volta conta. Cada real também.
             </p>

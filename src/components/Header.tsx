@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import logoFull from "@/assets/logo-full.png";
+import logoBranco from "@/assets/logo-branco.png";
+import logoVerde from "@/assets/logo-verde.png";
 import HeaderLink from "./HeaderLink";
 import { useEffect, useState } from "react";
 
@@ -25,7 +26,11 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-8">
-            <img src={logoFull} alt="Rooda" className="h-12" />
+            <img 
+              src={isScrolled ? logoVerde : logoBranco} 
+              alt="Rooda" 
+              className="h-12" 
+            />
             <nav className="hidden md:flex items-center gap-6">
               <HeaderLink href="#para-quem-roda" isScrolled={isScrolled}>Para quem Roda</HeaderLink>
               <HeaderLink href="#como-funciona" isScrolled={isScrolled}>Como Funciona</HeaderLink>
