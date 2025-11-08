@@ -6,8 +6,8 @@ const Hero = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
           <div className="text-center lg:text-left">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">Pare de trabalhar no escuro. Veja quanto você realmente lucra.</h1>
-            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">A cada corrida, seu lucro escorre pelo ralo em despesas invisíveis. O Rooda mostra exatamente quanto você está levando pra casa em poucos minutos.</p>
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">Descubra quanto você realmente lucra.</h1>
+            <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 leading-relaxed">A cada corrida, seu lucro escorre pelo ralo em despesas invisíveis. O Rooda mostra exatamente quanto você está levando para casa em poucos minutos.</p>
             
             <Button size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg px-10 py-7 rounded-xl shadow-2xl hover:shadow-accent/20 transition-all">
               COMEÇAR TESTE GRÁTIS por 7 dias
