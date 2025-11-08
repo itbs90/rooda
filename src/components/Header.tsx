@@ -27,10 +27,10 @@ const Header = () => {
           <div className="flex items-center gap-8">
             <img src={logoFull} alt="Rooda" className="h-12" />
             <nav className="hidden md:flex items-center gap-6">
-              <HeaderLink href="#problema" isScrolled={isScrolled}>Para quem Roda</HeaderLink>
+              <HeaderLink href="#para-quem-roda" isScrolled={isScrolled}>Para quem Roda</HeaderLink>
               <HeaderLink href="#como-funciona" isScrolled={isScrolled}>Como Funciona</HeaderLink>
               <HeaderLink href="#funcionalidades" isScrolled={isScrolled}>Funcionalidades</HeaderLink>
-              <HeaderLink href="#precos" isScrolled={isScrolled}>Planos</HeaderLink>
+              <HeaderLink href="#planos" isScrolled={isScrolled}>Planos</HeaderLink>
             </nav>
           </div>
           

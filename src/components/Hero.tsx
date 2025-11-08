@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
-import appMockup from "@/assets/app-mockup.png";
+import heroImage from "@/assets/hero-image.png";
 
 const Hero = () => {
   return (
@@ -40,8 +40,8 @@ const Hero = () => {
           
           <div className="relative flex justify-center lg:justify-end">
             <img 
-              src={appMockup} 
-              alt="Rooda App Interface" 
+              src={heroImage} 
+              alt="Rooda App Interface - Controle financeiro para motoristas de app" 
               className="w-full max-w-2xl drop-shadow-2xl animate-fade-in"
             />
           </div>
