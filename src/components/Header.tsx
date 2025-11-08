@@ -25,13 +25,12 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-8">
-            <img src={logoFull} alt="Rooda" className="h-8" />
+            <img src={logoFull} alt="Rooda" className="h-12" />
             <nav className="hidden md:flex items-center gap-6">
-              <HeaderLink href="#problema" isScrolled={isScrolled}>Por que Rooda?</HeaderLink>
+              <HeaderLink href="#problema" isScrolled={isScrolled}>Para quem Roda</HeaderLink>
               <HeaderLink href="#como-funciona" isScrolled={isScrolled}>Como Funciona</HeaderLink>
               <HeaderLink href="#funcionalidades" isScrolled={isScrolled}>Funcionalidades</HeaderLink>
-              <HeaderLink href="#precos" isScrolled={isScrolled}>Preços</HeaderLink>
-              <HeaderLink href="#faq" isScrolled={isScrolled}>FAQ</HeaderLink>
+              <HeaderLink href="#precos" isScrolled={isScrolled}>Planos</HeaderLink>
             </nav>
           </div>
           
