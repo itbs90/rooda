@@ -22,7 +22,7 @@ const Problems = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
             Você trabalha 12 horas por dia. Mas está realmente lucrando?
           </h2>
@@ -30,27 +30,26 @@ const Problems = () => {
             Todo motorista de app já passou por isso:
           </p>
           
-          <div className="space-y-8">
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
             {problems.map((problem, index) => (
-              <div key={index} className="bg-card border border-border rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
-                <div className="flex items-start gap-6">
-                  <div className="bg-primary/10 p-4 rounded-xl">
-                    <problem.icon className="w-8 h-8 text-primary" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3 text-card-foreground">
-                      "{problem.title}"
-                    </h3>
-                    <p className="text-lg text-muted-foreground leading-relaxed">
-                      {problem.description}
-                    </p>
-                  </div>
+              <div 
+                key={index} 
+                className="bg-primary rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1 group border-2 border-accent/20"
+              >
+                <div className="bg-accent/90 w-16 h-16 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 shadow-md">
+                  <problem.icon className="w-9 h-9 text-primary" strokeWidth={2.5} />
                 </div>
+                <h3 className="text-xl font-bold mb-4 text-accent leading-tight">
+                  "{problem.title}"
+                </h3>
+                <p className="text-base text-primary-foreground/90 leading-relaxed">
+                  {problem.description}
+                </p>
               </div>
             ))}
           </div>
           
-          <div className="mt-12 text-center">
+          <div className="text-center">
             <p className="text-2xl font-bold text-foreground">
               Sem controle = Sem lucro. É simples assim.
             </p>

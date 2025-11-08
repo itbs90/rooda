@@ -24,9 +24,10 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary">
-      <div className="container mx-auto px-4">
-        <div className="max-w-5xl mx-auto">
+    <section className="py-20 bg-secondary relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
             Controle profissional em 3 passos
           </h2>
@@ -35,20 +36,28 @@ const HowItWorks = () => {
           </p>
           
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {steps.map((step) => (
-              <div key={step.number} className="bg-background rounded-2xl p-8 shadow-sm">
-                <div className="bg-primary text-primary-foreground w-12 h-12 rounded-xl flex items-center justify-center text-xl font-bold mb-6">
+            {steps.map((step, index) => (
+              <div 
+                key={step.number} 
+                className="bg-background rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 group border border-border/50 relative"
+              >
+                <div className="absolute -top-4 -left-4 bg-primary text-primary-foreground w-14 h-14 rounded-xl flex items-center justify-center text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300 border-4 border-background">
                   {step.number}
                 </div>
-                <div className="mb-6">
-                  <step.icon className="w-12 h-12 text-primary" />
+                <div className="mt-6 mb-6 bg-accent/10 w-16 h-16 rounded-xl flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
+                  <step.icon className="w-9 h-9 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={2.5} />
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">
-                  PASSO {step.number} | {step.title}
+                <h3 className="text-lg font-bold mb-3 text-foreground uppercase tracking-wide">
+                  {step.title}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   {step.description}
                 </p>
+                {index < 2 && (
+                  <div className="hidden md:block absolute -right-4 top-1/2 transform -translate-y-1/2 text-accent text-4xl font-bold opacity-30">
+                    →
+                  </div>
+                )}
               </div>
             ))}
           </div>
@@ -56,7 +65,7 @@ const HowItWorks = () => {
           <div className="text-center">
             <Button 
               size="lg"
-              className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg px-10 py-7 rounded-xl"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg px-10 py-7 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
             >
               TESTAR GRÁTIS POR 7 DIAS
             </Button>
