@@ -39,10 +39,10 @@ const Header = () => {
             </nav>
           </div>
           
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2 md:gap-4">
             <Button 
               variant="ghost" 
-              className={`${
+              className={`text-sm md:text-base ${
                 isScrolled 
                   ? "text-foreground hover:text-primary" 
                   : "text-primary-foreground hover:text-primary-foreground/80"
@@ -50,7 +50,7 @@ const Header = () => {
             >
               Acessar Conta
             </Button>
-            <Button className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold">
+            <Button className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold text-sm md:text-base px-3 md:px-4">
               Criar conta Grátis
             </Button>
           </div>

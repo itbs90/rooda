@@ -8,8 +8,10 @@ import {
   Zap, 
   FileText 
 } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Features = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const features = [
     {
       icon: LayoutDashboard,
@@ -56,7 +58,12 @@ const Features = () => {
   return (
     <section id="funcionalidades" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div 
+          ref={ref}
+          className={`max-w-6xl mx-auto transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
             Tudo que você precisa para lucrar mais
           </h2>

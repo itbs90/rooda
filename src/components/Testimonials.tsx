@@ -1,6 +1,8 @@
 import { Star } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const Testimonials = () => {
+  const { ref, isVisible } = useScrollAnimation();
   const testimonials = [
     {
       name: "João M.",
@@ -25,7 +27,12 @@ const Testimonials = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
+        <div 
+          ref={ref}
+          className={`max-w-6xl mx-auto transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
             Motoristas reais. Resultados reais.
           </h2>

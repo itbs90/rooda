@@ -1,12 +1,19 @@
 import womanPhone from "@/assets/woman-phone.png";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const VisualShowcase = () => {
+  const { ref, isVisible } = useScrollAnimation();
   return (
     <section className="py-20 bg-gradient-to-br from-background to-secondary/20">
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
+        <div 
+          ref={ref}
+          className={`grid lg:grid-cols-2 gap-12 lg:gap-16 items-center max-w-7xl mx-auto transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <div className="relative order-2 lg:order-1">
             <div className="relative">
               <div className="absolute inset-0 bg-accent/20 rounded-full blur-3xl transform -translate-x-20"></div>

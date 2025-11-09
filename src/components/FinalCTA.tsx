@@ -1,11 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/use-scroll-animation";
 
 const FinalCTA = () => {
+  const { ref, isVisible } = useScrollAnimation();
   return (
     <section className="py-20 bg-gradient-to-br from-hero-from to-hero-to text-primary-foreground">
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
+        <div 
+          ref={ref}
+          className={`max-w-4xl mx-auto text-center transition-all duration-1000 ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+          }`}
+        >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             Pare de rodar no escuro. Comece a lucrar de verdade.
           </h2>
