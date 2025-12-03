@@ -44,7 +44,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section className="py-20 bg-secondary">
+    <section className="py-12 md:py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div 
           ref={ref}
@@ -52,21 +52,21 @@ const FAQ = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-16 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-10 md:mb-16 text-foreground">
             Perguntas frequentes
           </h2>
           
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-3 md:space-y-4">
             {faqs.map((faq, index) => (
               <AccordionItem 
                 key={index} 
                 value={`item-${index}`}
-                className="bg-background border border-border rounded-xl px-6 shadow-sm"
+                className="bg-background border border-border rounded-xl px-4 md:px-6 shadow-sm"
               >
-                <AccordionTrigger className="text-left text-lg font-semibold hover:no-underline py-6">
+                <AccordionTrigger className="text-left text-sm sm:text-base md:text-lg font-semibold hover:no-underline py-4 md:py-6">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed pb-6">
+                <AccordionContent className="text-sm md:text-base text-muted-foreground leading-relaxed pb-4 md:pb-6">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>
