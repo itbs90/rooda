@@ -6,12 +6,9 @@ const Footer = () => {
     <footer className="bg-primary text-primary-foreground py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
-          {/* Logo e tagline */}
+          {/* Logo */}
           <div className="flex flex-col gap-4">
-            <img src={logoRodape} alt="Rooda" className="h-12" />
-            <p className="text-primary-foreground/80 text-base">
-              Cada volta conta. Cada real também.
-            </p>
+            <img src={logoRodape} alt="Rooda" className="h-12 w-auto max-w-[200px]" />
           </div>
 
           {/* Links rápidos */}
