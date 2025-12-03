@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import logoBranco from "@/assets/logo-branco.png";
-import logoVerde from "@/assets/logo-verde.png";
+import logoMenuVerde from "@/assets/logo-menu-verde.png";
+import logoMenuBranco from "@/assets/logo-menu-branco.png";
 import HeaderLink from "./HeaderLink";
 import { useEffect, useState } from "react";
 
@@ -27,7 +27,7 @@ const Header = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-8">
             <img 
-              src={isScrolled ? logoVerde : logoBranco} 
+              src={isScrolled ? logoMenuBranco : logoMenuVerde} 
               alt="Rooda" 
               className="h-12" 
             />
