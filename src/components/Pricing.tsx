@@ -53,7 +53,7 @@ const Pricing = () => {
   ];
 
   return (
-    <section id="planos" className="py-20 bg-background">
+    <section id="planos" className="py-12 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         <div 
           ref={ref}
@@ -61,58 +61,58 @@ const Pricing = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground">
             Comece grátis. Evolua quando ver o valor.
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mt-10 md:mt-16">
             {plans.map((plan, index) => (
               <div 
                 key={index} 
-                className={`rounded-2xl p-8 ${
+                className={`rounded-2xl p-5 md:p-8 ${
                   plan.highlighted 
-                    ? 'bg-primary text-primary-foreground shadow-2xl scale-105 border-2 border-accent' 
+                    ? 'bg-primary text-primary-foreground shadow-2xl sm:scale-105 border-2 border-accent order-first sm:order-none' 
                     : 'bg-card border border-border shadow-sm'
                 }`}
               >
                 {plan.badge && (
-                  <div className="bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full inline-block mb-4">
+                  <div className="bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full inline-block mb-3 md:mb-4">
                     {plan.badge}
                   </div>
                 )}
                 
-                <h3 className={`text-xl font-bold mb-4 ${plan.highlighted ? 'text-primary-foreground' : 'text-foreground'}`}>
+                <h3 className={`text-lg md:text-xl font-bold mb-3 md:mb-4 ${plan.highlighted ? 'text-primary-foreground' : 'text-foreground'}`}>
                   {plan.name}
                 </h3>
                 
-                <div className="mb-6">
-                  <div className="flex items-baseline gap-2">
-                    <span className={`text-4xl font-bold ${plan.highlighted ? 'text-primary-foreground' : 'text-foreground'}`}>
+                <div className="mb-4 md:mb-6">
+                  <div className="flex items-baseline gap-1 md:gap-2 flex-wrap">
+                    <span className={`text-2xl sm:text-3xl md:text-4xl font-bold ${plan.highlighted ? 'text-primary-foreground' : 'text-foreground'}`}>
                       {plan.price}
                     </span>
                     {plan.period && (
-                      <span className={`text-lg ${plan.highlighted ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
+                      <span className={`text-base md:text-lg ${plan.highlighted ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
                         {plan.period}
                       </span>
                     )}
                   </div>
                   {plan.originalPrice && (
                     <div className="mt-2">
-                      <span className={`line-through mr-2 ${plan.highlighted ? 'text-primary-foreground/60' : 'text-muted-foreground'}`}>
+                      <span className={`line-through mr-2 text-sm ${plan.highlighted ? 'text-primary-foreground/60' : 'text-muted-foreground'}`}>
                         {plan.originalPrice}
                       </span>
-                      <span className={`font-semibold ${plan.highlighted ? 'text-primary-foreground' : 'text-foreground'}`}>
+                      <span className={`font-semibold text-sm ${plan.highlighted ? 'text-primary-foreground' : 'text-foreground'}`}>
                         {plan.discount}
                       </span>
                     </div>
                   )}
                 </div>
                 
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-2 md:space-y-3 mb-6 md:mb-8">
                   {plan.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <Check className={`w-5 h-5 flex-shrink-0 mt-0.5 ${plan.highlighted ? 'text-accent' : 'text-primary'}`} />
-                      <span className={`text-sm ${plan.highlighted ? 'text-primary-foreground/90' : 'text-muted-foreground'}`}>
+                    <li key={idx} className="flex items-start gap-2 md:gap-3">
+                      <Check className={`w-4 h-4 md:w-5 md:h-5 flex-shrink-0 mt-0.5 ${plan.highlighted ? 'text-accent' : 'text-primary'}`} />
+                      <span className={`text-xs sm:text-sm ${plan.highlighted ? 'text-primary-foreground/90' : 'text-muted-foreground'}`}>
                         {feature}
                       </span>
                     </li>
@@ -120,13 +120,13 @@ const Pricing = () => {
                 </ul>
                 
                 {plan.note && (
-                  <p className={`text-sm italic mb-6 ${plan.highlighted ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
+                  <p className={`text-xs sm:text-sm italic mb-4 md:mb-6 ${plan.highlighted ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
                     {plan.note}
                   </p>
                 )}
                 
                 <Button 
-                  className={`w-full font-bold py-6 rounded-xl ${
+                  className={`w-full font-bold py-5 md:py-6 rounded-xl text-sm md:text-base ${
                     plan.highlighted 
                       ? 'bg-accent text-accent-foreground hover:bg-accent/90' 
                       : 'bg-primary text-primary-foreground hover:bg-primary/90'
@@ -138,7 +138,7 @@ const Pricing = () => {
             ))}
           </div>
           
-          <p className="text-center mt-12 text-muted-foreground">
+          <p className="text-center mt-8 md:mt-12 text-sm md:text-base text-muted-foreground">
             Todos os planos: Cancele quando quiser. Período de teste incluso.
           </p>
         </div>

@@ -26,7 +26,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section id="como-funciona" className="py-20 bg-secondary relative overflow-hidden">
+    <section id="como-funciona" className="py-12 md:py-20 bg-secondary relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
       <div className="container mx-auto px-4 relative z-10">
         <div 
@@ -35,29 +35,29 @@ const HowItWorks = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-3 md:mb-4 text-foreground">
             Controle profissional em 3 passos
           </h2>
-          <p className="text-xl text-center mb-16 text-muted-foreground">
+          <p className="text-base sm:text-lg md:text-xl text-center mb-10 md:mb-16 text-muted-foreground">
             (2 minutos por dia)
           </p>
           
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
             {steps.map((step, index) => (
               <div 
                 key={step.number} 
-                className="bg-background rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 group border border-border/50 relative"
+                className="bg-background rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-2 group border border-border/50 relative"
               >
-                <div className="absolute -top-4 -left-4 bg-primary text-primary-foreground w-14 h-14 rounded-xl flex items-center justify-center text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300 border-4 border-background">
+                <div className="absolute -top-3 -left-3 md:-top-4 md:-left-4 bg-primary text-primary-foreground w-10 h-10 md:w-14 md:h-14 rounded-xl flex items-center justify-center text-lg md:text-2xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300 border-4 border-background">
                   {step.number}
                 </div>
-                <div className="mt-6 mb-6 bg-accent/10 w-16 h-16 rounded-xl flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
-                  <step.icon className="w-9 h-9 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={2.5} />
+                <div className="mt-4 md:mt-6 mb-4 md:mb-6 bg-accent/10 w-12 h-12 md:w-16 md:h-16 rounded-xl flex items-center justify-center group-hover:bg-accent/20 transition-colors duration-300">
+                  <step.icon className="w-6 h-6 md:w-9 md:h-9 text-accent group-hover:scale-110 transition-transform duration-300" strokeWidth={2.5} />
                 </div>
-                <h3 className="text-lg font-bold mb-3 text-foreground uppercase tracking-wide">
+                <h3 className="text-base md:text-lg font-bold mb-2 md:mb-3 text-foreground uppercase tracking-wide">
                   {step.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                   {step.description}
                 </p>
                 {index < 2 && (
@@ -72,7 +72,7 @@ const HowItWorks = () => {
           <div className="text-center">
             <Button 
               size="lg"
-              className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-lg px-10 py-7 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105"
+              className="bg-accent text-accent-foreground hover:bg-accent/90 font-bold text-sm sm:text-base md:text-lg px-6 sm:px-8 md:px-10 py-5 sm:py-6 md:py-7 rounded-xl shadow-lg hover:shadow-xl transition-all hover:scale-105 w-full sm:w-auto"
             >
               TESTAR GRÁTIS POR 7 DIAS
             </Button>

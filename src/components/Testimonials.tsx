@@ -25,7 +25,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-12 md:py-20 bg-background">
       <div className="container mx-auto px-4">
         <div 
           ref={ref}
@@ -33,24 +33,24 @@ const Testimonials = () => {
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
           }`}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-4 text-foreground">
             Motoristas reais. Resultados reais.
           </h2>
           
-          <div className="grid md:grid-cols-3 gap-8 mt-16">
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 mt-10 md:mt-16">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-card border border-border rounded-2xl p-8">
-                <div className="flex gap-1 mb-4">
+              <div key={index} className="bg-card border border-border rounded-2xl p-5 md:p-8">
+                <div className="flex gap-1 mb-3 md:mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-accent text-accent" />
+                    <Star key={i} className="w-4 h-4 md:w-5 md:h-5 fill-accent text-accent" />
                   ))}
                 </div>
-                <p className="text-lg mb-6 text-card-foreground leading-relaxed italic">
+                <p className="text-sm sm:text-base md:text-lg mb-4 md:mb-6 text-card-foreground leading-relaxed italic">
                   "{testimonial.text}"
                 </p>
-                <div className="pt-4 border-t border-border">
-                  <p className="font-bold text-foreground">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">
+                <div className="pt-3 md:pt-4 border-t border-border">
+                  <p className="font-bold text-sm md:text-base text-foreground">{testimonial.name}</p>
+                  <p className="text-xs md:text-sm text-muted-foreground">
                     {testimonial.location} | {testimonial.app}
                   </p>
                 </div>
@@ -58,7 +58,7 @@ const Testimonials = () => {
             ))}
           </div>
           
-          <p className="text-center mt-12 text-xl font-semibold text-foreground">
+          <p className="text-center mt-8 md:mt-12 text-base sm:text-lg md:text-xl font-semibold text-foreground">
             Mais de 500 motoristas já profissionalizaram suas corridas.
           </p>
         </div>
